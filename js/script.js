@@ -1,9 +1,10 @@
 /* ---------------Variables-----------------*/
 let sectionElt = document.getElementById('items');
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api/' : '---';
 /* ---------------FIN Variables------------*/
 
 function getProductsList() {
-    fetch('http://localhost:3000/api/products')
+    fetch(`${apiUrl}products`)
         .then(function(res) {
             if(res.ok) {
                 return res.json();

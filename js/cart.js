@@ -29,10 +29,10 @@ let regexNamesAndCityAddress = new RegExp(/^[A-Za-z]{2,}$/);
 
 let cart = localStorage.getItem('cartProduct');
 cart = JSON.parse(cart);
-console.log(cart);
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api/' : '---';
 
 for (let article of cart) {
-    fetch('http://localhost:3000/api/products/' + article.id)
+    fetch(`${apiUrl}products/` + article.id)
     .then(function(res) {
         if (res.ok) {
             return res.json();
@@ -240,7 +240,7 @@ function calculateTotal() {
     let newTotalPrice = 0;
 
     for(let article of articles) {
-        fetch('http://localhost:3000/api/products/' + article.dataset.id)
+        fetch(`${apiUrl}products/` + article.dataset.id)
         .then(function(res) {
             if (res.ok) {
                 return res.json();

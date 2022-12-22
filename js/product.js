@@ -14,9 +14,10 @@ let colorElt = document.getElementById('colors');
 let buttonElt = document.getElementById('addToCart');
 let quantityElt = document.getElementById('quantity'); 
 let container = document.getElementsByClassName('item__content')[0];
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api/' : '---';
 /*------------FIN Variables-------------*/
 function showProduct() {
-    fetch('http://localhost:3000/api/products/' + urlId)
+    fetch(`${apiUrl}products/` + urlId)
     .then(function(res) {
         if(res.ok) {
             return res.json();
