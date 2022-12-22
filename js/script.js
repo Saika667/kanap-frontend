@@ -1,10 +1,10 @@
 /* ---------------Variables-----------------*/
 let sectionElt = document.getElementById('items');
-const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api/' : '---';
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://saika-kanap-backend.herokuapp.com/api';
 /* ---------------FIN Variables------------*/
 
 function getProductsList() {
-    fetch(`${apiUrl}products`)
+    fetch(`${apiUrl}/products`)
         .then(function(res) {
             if(res.ok) {
                 return res.json();
