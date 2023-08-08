@@ -29,7 +29,7 @@ let regexNamesAndCityAddress = new RegExp(/^[A-Za-z]{2,}$/);
 
 let cart = localStorage.getItem('cartProduct');
 cart = JSON.parse(cart);
-const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://saika-kanap-backend.herokuapp.com/api';
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://kanap-api.fly.dev/api';
 
 for (let article of cart) {
     fetch(`${apiUrl}/products/` + article.id)

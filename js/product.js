@@ -14,7 +14,7 @@ let colorElt = document.getElementById('colors');
 let buttonElt = document.getElementById('addToCart');
 let quantityElt = document.getElementById('quantity'); 
 let container = document.getElementsByClassName('item__content')[0];
-const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://saika-kanap-backend.herokuapp.com/api';
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://kanap-api.fly.dev/api';
 /*------------FIN Variables-------------*/
 function showProduct() {
     fetch(`${apiUrl}/products/` + urlId)

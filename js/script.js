@@ -1,6 +1,6 @@
 /* ---------------Variables-----------------*/
 let sectionElt = document.getElementById('items');
-const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://saika-kanap-backend.herokuapp.com/api';
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/api' : 'https://kanap-api.fly.dev/api';
 /* ---------------FIN Variables------------*/
 
 function getProductsList() {
